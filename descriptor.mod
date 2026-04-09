@@ -5,5 +5,5 @@ tags={
 	"Gameplay"
 	"Historical"
 }
-name="Leaders are Mortal"
-supported_version="1.16.9"
+name="Country Rank System"
+supported_version="1.17.*"
