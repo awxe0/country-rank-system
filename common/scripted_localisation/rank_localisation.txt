@@ -1,0 +1,22 @@
+defined_text = {
+	name = GetFullRankList
+
+	text = {
+		trigger = { always = yes }
+		localization_key = "rank_system.full_list"
+	}
+}
+
+defined_text = {
+	name = GetRankX
+	text = { trigger = { has_country_flag = RANK_X } localization_key = "rank_entry" }
+}
+# Aynı şekilde GetRankS, GetRankA ... GetRankF için kopyala
+
+defined_text = {
+	name = rank_entry
+	text = {
+		trigger = { always = yes }
+		localization_key = "rank_country_entry"
+	}
+}

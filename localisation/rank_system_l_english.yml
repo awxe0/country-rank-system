@@ -1,1 +1,7 @@
-﻿
+﻿l_english:
+ rank_system.calculate.t:0 "Ranks Updated"
+ rank_system.open_window.t:0 "§YCOUNTRY RANKS, POINTS AND FACTIONS§!"
+ rank_system.close:0 "Close"
+
+ # (scripted_loc ile doldurulacak)
+ rank_system.full_list:0 "§R§L X (16) §!War Allowed: §YJul 1940§!\n[GetRankX]\n\n§O§L S (12) §!War Allowed: §YJan 1940§!\n[GetRankS]\n\n§Y§L A (10) §!War Allowed: §YJul 1939§!\n[GetRankA]\n\n§G§L B (8) §!War Allowed: §YJan 1939§!\n[GetRankB]\n\n§E§L C (6) §!War Allowed: §YJul 1938§!\n[GetRankC]\n\n§T§L D (4) §!War Allowed: §YJan 1938§!\n[GetRankD]\n\n§L E (2) §!War Allowed: §YJan 1937§!\n[GetRankE]\n\n§L F (0) §!War Allowed: §YJan 1936§!\n[GetRankF]\n\n§RFACTIONS§!\n[GetFactionList]"

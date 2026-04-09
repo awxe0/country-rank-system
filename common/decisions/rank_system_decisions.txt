@@ -1,0 +1,14 @@
+rank_system_category = {
+	icon = GFX_decision_category_political
+
+	open_country_ranks = {
+		icon = GFX_decision_generic_intel
+		ai_will_do = { factor = 0 }
+
+		available = { always = yes }
+
+		complete_effect = {
+			country_event = { id = rank_system.open_window hours = 0 }
+		}
+	}
+}

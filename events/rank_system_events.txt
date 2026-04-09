@@ -1,0 +1,50 @@
+namespace = rank_system
+
+# -- RANK CALCULATION
+country_event = {
+	id = rank_system.calculate
+	title = "rank_system.calculate.t"
+	hidden = yes
+
+	trigger = {
+		OR = {
+			is_ai = no
+			original_tag = ENG   # --for test
+		}
+	}
+
+	immediate = 
+		every_country = {
+			limit = { tag = ROOT } # ROOT
+			set_variable = { rank_points = 0 }
+
+			add_to_variable = { rank_points = num_of_factories * 3 }
+			add_to_variable = { rank_points = num_of_military_factories * 5 }
+			add_to_variable = { rank_points = num_of_dockyards * 2 }
+			add_to_variable = { rank_points = num_of_civilian_factories * 1 }
+			add_to_variable = { rank_points = manpower / 5000 }   # 5000 manpower = 1 point
+			add_to_variable = { rank_points = get_military_power / 50 }
+
+			if = { limit = { check_variable = { rank_points > 140 } } set_country_flag = RANK_X }
+			else_if = { limit = { check_variable = { rank_points > 110 } } set_country_flag = RANK_S }
+			else_if = { limit = { check_variable = { rank_points > 85 } } set_country_flag = RANK_A }
+			else_if = { limit = { check_variable = { rank_points > 60 } } set_country_flag = RANK_B }
+			else_if = { limit = { check_variable = { rank_points > 40 } } set_country_flag = RANK_C }
+			else_if = { limit = { check_variable = { rank_points > 20 } } set_country_flag = RANK_D }
+			else_if = { limit = { check_variable = { rank_points > 5 } } set_country_flag = RANK_E }
+			else = { set_country_flag = RANK_F }
+		}
+	}
+}
+
+# -- Main Window
+country_event = {
+	id = rank_system.open_window
+	title = "rank_system.open_window.t"
+	desc = "[GetFullRankList]"
+	picture = GFX_evt_rank_background
+
+	option = {
+		name = "rank_system.close"
+	}
+}
